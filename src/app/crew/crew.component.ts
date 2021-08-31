@@ -21,7 +21,7 @@ export class CrewComponent implements OnInit {
   add(memberName: string, isFirst: boolean) {
     let arr: string[] = [];
     this.crew.forEach( member => {
-      arr.push(member.name)
+      arr.push(member["name"])
     })
     if (!arr.includes(memberName)) {
       this.crew.push({ name: memberName, firstMission: isFirst });
