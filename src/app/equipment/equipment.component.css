@@ -12,6 +12,10 @@ h3 {
     text-align: center;
 }
 
+.active{
+    background-color: rgb(46, 179, 46);
+}
+
 /* Add an 'active' class to style the background of the 'Add to Cargo Hold' buttons. */
 
 

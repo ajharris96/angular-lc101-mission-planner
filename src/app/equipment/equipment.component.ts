@@ -32,5 +32,9 @@ export class EquipmentComponent implements OnInit {
     this.cargoMass+=item['mass'];
     return (this.cargoMass<=(this.maximumAllowedMass-200))
    }
+
+   isActive(item: object): boolean{
+     return this.cargoHold.length===this.maxItems ||(this.cargoMass+item['mass']>this.maximumAllowedMass)
+   }
    
 }
