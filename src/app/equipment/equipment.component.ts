@@ -23,6 +23,7 @@ export class EquipmentComponent implements OnInit {
    maxItems: number = 10;
   inactive: boolean;
 
+
    constructor() { }
 
    ngOnInit() { }
@@ -36,5 +37,14 @@ export class EquipmentComponent implements OnInit {
    isActive(item: object): boolean{
      return this.cargoHold.length===this.maxItems ||(this.cargoMass+item['mass']>this.maximumAllowedMass)
    }
+
+  isNear():boolean{
+   return (this.maximumAllowedMass-this.cargoMass<=200)
+  }
+
+  clearHold(){
+    this.cargoHold = [];
+    this.cargoMass = 0;
+  }
    
 }
